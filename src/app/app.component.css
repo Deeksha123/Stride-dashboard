@@ -1,5 +1,28 @@
-.appContainer{
-    margin: 10px;
-    height: 800px;
+#appContainer{
+    margin: 15px;
+    height: 830px;
     box-shadow: 0px 0px 12px black;
+    overflow: auto;
+}
+
+.container{
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+}
+
+.container{
+    background-color: goldenrod;
+    color: #000;
+}
+
+.navbar-header input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+    margin-left: 200px;
+    width: 550px;
 }

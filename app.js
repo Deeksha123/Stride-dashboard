@@ -15,6 +15,6 @@ app.use(function(req, res, next) {
 
 routes(app);
 
-var server = app.listen(3000, function () {
+var server = app.listen(3100, function () {
     console.log("app running on port.", server.address().port);
 });

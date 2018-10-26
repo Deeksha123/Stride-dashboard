@@ -1,0 +1,17 @@
+.carousel-inner{
+    height: 400px;
+}
+#batchCarousel{
+    background-color: slategrey;
+}
+
+.container-fluid .statusBar{
+    height: 50px;
+    margin: 10px;
+    padding-left: 32px;
+    text-align: left;
+}
+.container-fluid .statusBar a{
+    font-size: 16px;
+    margin: 10px;
+}

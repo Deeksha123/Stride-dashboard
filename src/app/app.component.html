@@ -1,11 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <div class="container appContainer">
+  <div id="appContainer" class="container-fluid">
     <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="contentContainer">
-                
+        <div class="">
+            
+          <!-- header starts -->
+          <div class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="/">Dashboard Pool</a>
+                  <input type="text" placeholder="Search..">
+                </div>
             </div>
+          </div>
+          <!-- header ends -->
+
+          <!-- body starts -->
+
+          <div class="container-fluid">
+            <router-outlet></router-outlet>
+          </div>
+
+          <!-- body ends -->
+
         </div>
     </div>
   </div>
