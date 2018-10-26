@@ -22,12 +22,13 @@ export class BatchComponent implements OnInit {
       self.dashboardData = data;
       
       for(let i of self.dashboardData) {
-        if( self.dashboardData[i].status == "processing" )
-          self.processingData = self.dashboardData[i].documents;
-        else if( self.processingBatch[i].status == "success" )
-          self.successData = self.dashboardData[i].documents;
-              else if( self.processingBatch[i].status == "queued" )
-                self.queuedData = self.processingBatch[i].documents;
+        console.log(i)
+        if( i["status"] == "processing" )
+          self.processingData = i["documents"];
+        else if( i["status"] == "success" )
+          self.successData = i["documents"];
+              else if( i["status"] == "queued" )
+                self.queuedData = i["documents"];
       }
 
     });
