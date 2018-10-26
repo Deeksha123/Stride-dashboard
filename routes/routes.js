@@ -7,7 +7,6 @@ var appRouter = function (app) {
     // });
 
     app.get("/data/dashboard", ( req, res ) => {
-        console.log("inside file read api``");
         var data;
         fs.readFile('src/app/data/dashboard.json', function (err, file_data){
             if(err)

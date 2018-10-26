@@ -12,15 +12,29 @@ export class BatchComponent implements OnInit {
   constructor(private router: Router, private appService: AppService) { }
 
   dashboardData = "";
+  processingData = "";
+  successData = "";
+  queuedData = "";
 
   ngOnInit() {
+    var self = this;
     this.appService.fetchDashboardData(function( data ) {
-      console.log("data found",data);
+      self.dashboardData = data;
+      
+      for(let i of self.dashboardData) {
+        if( self.dashboardData[i].status == "processing" )
+          self.processingData = self.dashboardData[i].documents;
+        else if( self.processingBatch[i].status == "success" )
+          self.successData = self.dashboardData[i].documents;
+              else if( self.processingBatch[i].status == "queued" )
+                self.queuedData = self.processingBatch[i].documents;
+      }
+
     });
   }
 
   processingBatch() {
-
+    
   }
 
   successBatch() {
