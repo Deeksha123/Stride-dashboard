@@ -40,12 +40,40 @@
 
     <div id="dataContainer">
       <div class="" *ngFor="let item of processingData; let i = index">
-        <div class="card">
+        <div class="card" [hidden]="!showProcessingData">
             <div class="eventContainer">
                 <a href="" class="edit" ng-click="editProfile(member, $index)">edit</a>
                 <a href="" class="delete" ng-click="deleteProfile(member.mob)">delete</a>
             </div>
             <img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="" height=60px width=60px;>
+            <div class="details">
+                <!-- <span>{{item.name}}</span>
+                <span>{{item.mob}}</span> -->
+            </div>
+        </div>
+      </div>
+
+      <div class="" *ngFor="let item of successData; let i = index">
+        <div class="card" [hidden]="!showSuccessData">
+            <div class="eventContainer">
+                <a href="" class="edit" ng-click="editProfile(member, $index)">edit</a>
+                <a href="" class="delete" ng-click="deleteProfile(member.mob)">delete</a>
+            </div>
+            <img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="" height=60px width=60px;>
+            <div class="details">
+                <!-- <span>{{item.name}}</span>
+                <span>{{item.mob}}</span> -->
+            </div>
+        </div>
+      </div>
+
+      <div class="" *ngFor="let item of queuedData; let i = index">
+        <div class="card" [hidden]="!showQueuedData">
+            <div class="eventContainer">
+                <a href="" class="edit" ng-click="editProfile(member, $index)">edit</a>
+                <a href="" class="delete" ng-click="deleteProfile(member.mob)">delete</a>
+            </div>
+            <img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="" height=60px width=60px;>
             <div class="details">
                 <!-- <span>{{item.name}}</span>
                 <span>{{item.mob}}</span> -->

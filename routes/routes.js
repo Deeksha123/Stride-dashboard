@@ -2,11 +2,11 @@ var fs = require('fs')
 
 var appRouter = function (app) {
 
-    // app.get("/", ( req, res ) => {
-    //     res.send("Hello World");
-    // });
+    app.get("/", ( req, res ) => {
+        res.send("APIs running.");
+    });
 
-    app.get("/data/dashboard", ( req, res ) => {
+    app.get("/dashboard", ( req, res ) => {
         var data;
         fs.readFile('src/app/data/dashboard.json', function (err, file_data){
             if(err)
